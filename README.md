@@ -54,10 +54,13 @@ Steps:
         <logmode>roll</logmode>
     </service>
     ```
-3. In the same directory, paste the JAR file: ![Service Folder](./Others/Images/service-folder.png)
-4. Open a Command Promtp terminal, install and start the service:![Service Folder](./Others/Images/install-run-service.png)
+3. In the same directory, paste the JAR file:
+   ![Service Folder](./Others/Images/service-folder.png)
+5. Open a Command Promtp terminal, install and start the service:
+   ![Service Folder](./Others/Images/install-run-service.png)
 
-The Java Application is running and reporting in the specified log file: ![WinSW Configuration](./Others/Images/log.png)
+The Java Application is running and reporting in the specified log file: 
+![WinSW Configuration](./Others/Images/log.png)
 
 
 
