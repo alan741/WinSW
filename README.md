@@ -65,6 +65,10 @@ The Java Application is running and reporting in the specified log file:
 
 ![WinSW Configuration](./Others/Images/log.png)
 
+References:
+- https://github.com/winsw/winsw
+- https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/EnableScheduling.html
+- https://spring.io/guides/gs/scheduling-tasks
 
 
 
