@@ -37,7 +37,28 @@ Now, we can create our Component with our Scheduled task, like this:
 
 - _@Scheduled(fixedRate = 10000):_ Every 10 seconds our application will execute the SayHello() function.
 
-## WinSW Configuration
+
+
+
+
+## WinSW Global Configuration
+
+The goal of this configuration is to use the same winsw.exe and manage all the services that we want to run as Windows Service.
+
+1. Locate the winsw.exe in common place in your computer
+2. Update PATH variable, and add the folder path where the winsw.exe was located
+
+    ![](./Others/Images/winsw-path.png)
+    
+    ![](./Others/Images/winsw-path-variable.png)
+3. Verify the configuration. In a Command Prompt type __winsw -?__
+
+    ![](./Others/Images/winsw-test-system-variable.png)
+4. Now, try to install sa new Windows Service:
+
+    ![](./Others/Images/winsw-global-install-new-service.png)
+
+## WinSW Project Configuration
 
 WinSW wraps and manages any application as a Windows service. In this case, we want to execute JAR files.
 
@@ -58,6 +79,14 @@ Steps:
 4. Open a Command Promtp terminal, install and start the service:![Service Folder](./Others/Images/install-run-service.png)
 
 The Java Application is running and reporting in the specified log file: ![WinSW Configuration](./Others/Images/log.png)
+
+## Extra Configurations
+
+### Depend tag
+
+Specify IDs of other services that this service depends on. When service X depends on service Y, X can only run if Y is running.
+
+
 
 
 
