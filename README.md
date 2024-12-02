@@ -37,10 +37,6 @@ Now, we can create our Component with our Scheduled task, like this:
 
 - _@Scheduled(fixedRate = 10000):_ Every 10 seconds our application will execute the SayHello() function.
 
-
-
-
-
 ## WinSW Global Configuration
 
 The goal of this configuration is to use the same winsw.exe and manage all the services that we want to run as Windows Service.
@@ -86,7 +82,25 @@ The Java Application is running and reporting in the specified log file:
 
 ![WinSW Configuration](./Others/Images/log.png)
 
-References:
+## Extra Configurations Tags
+
+### <depend>
+
+Specify IDs of other services that this service depends on. When service X depends on service Y, X can only run if Y is running.
+
+In this example, we have myFirstService and mySecondService, where mySecondService depends on myFirstService. For this, we add the depend tag to our configuration file:
+
+![depend tag example](./Others/Images/depend-tag-example.png)
+
+So, if we try to run mySecondService and myFirstService is not running yet, winsw will show this error:
+
+![depend tag example](./Others/Images/depend-tag-test.png)
+
+Now, in the scenario that both services are running and we want to stop myFirstService, winsw can't stop myFirstService because mySecondService depends on myFirstService. WinSW will show the next error:
+
+![depend tag example](./Others/Images/depend-tag-test-1.png)
+
+## References
 - https://github.com/winsw/winsw
 - https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/EnableScheduling.html
 - https://spring.io/guides/gs/scheduling-tasks
