@@ -75,19 +75,21 @@ Steps:
         <logmode>roll</logmode>
     </service>
     ```
-3. In the same directory, paste the JAR file: ![Service Folder](./Others/Images/service-folder.png)
-4. Open a Command Promtp terminal, install and start the service:![Service Folder](./Others/Images/install-run-service.png)
+3. In the same directory, paste the JAR file:
 
-The Java Application is running and reporting in the specified log file: ![WinSW Configuration](./Others/Images/log.png)
+   ![Service Folder](./Others/Images/service-folder.png)
+4. Open a Command Promtp terminal, install and start the service:
 
-## Extra Configurations
+   ![Service Folder](./Others/Images/install-run-service.png)
 
-### Depend tag
+The Java Application is running and reporting in the specified log file: 
 
-Specify IDs of other services that this service depends on. When service X depends on service Y, X can only run if Y is running.
+![WinSW Configuration](./Others/Images/log.png)
 
-
-
+References:
+- https://github.com/winsw/winsw
+- https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/EnableScheduling.html
+- https://spring.io/guides/gs/scheduling-tasks
 
 
 
