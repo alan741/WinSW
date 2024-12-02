@@ -1,0 +1,9 @@
+<service>
+  <id>mySecondService</id>
+  <name>mySecondService</name>
+  <description>Spring Boot App running as Windows service</description>
+  <executable>java</executable>
+  <arguments>-jar "second-demo-service-0.0.1-SNAPSHOT.jar"</arguments>
+  <log mode="reset"/>
+  <onfailure action="restart" delay="10 sec"/>
+</service>
